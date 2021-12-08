@@ -25,7 +25,7 @@ body {
   display: flex;
 	justify-content: center;
 	align-content: center;
-	gap: 5rem;
+	gap: 5vw;
 	flex-wrap: wrap;
   height: 100vh;
 }
@@ -184,7 +184,9 @@ body {
   font: 3rem Arial;
   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 @keyframes desaparecer {
   0%{
@@ -208,4 +210,13 @@ body {
     opacity: 0;
 		left: -100%;
 	}
+}
+
+@media (max-width: 500px) {
+  .container{
+    flex-direction: column;
+  }
+  .box {
+    --ancho: 25vw;
+  }
 }
