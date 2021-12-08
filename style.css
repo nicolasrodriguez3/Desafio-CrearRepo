@@ -20,3 +20,148 @@ body {
 		background-position: 0% 50%;
 	}
 }
+.container{
+  display: flex;
+	justify-content: center;
+	align-content: center;
+	gap: 5rem;
+	flex-wrap: wrap;
+  height: 100vh;
+}
+.box {
+	--ancho: 10vw;
+	width: var(--ancho);
+	height: var(--ancho);
+	background-color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font: 3rem Arial;
+	cursor: default;
+}
+.box1 {
+	animation: subir-bajar 5s infinite;
+}
+@keyframes subir-bajar {
+	33% {
+		transform: translateY(200px);
+	}
+	66% {
+		transform: translateY(-200px);
+	}
+}
+.box2 {
+	animation: rotar 5s infinite linear;
+	border-radius: 50%;
+  border: 10px dashed white;
+  border-spacing: 5px;
+}
+@keyframes rotar {
+	25% {
+		transform: rotateZ(90deg);
+	}
+	50% {
+		transform: rotateZ(180deg);
+	}
+	75% {
+		transform: rotateZ(270deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+.box3 {
+	animation: agrandar 5s infinite;
+}
+@keyframes agrandar {
+	25% {
+		transform: skew(45deg);
+	}
+	50% {
+		transform: skew(0deg);
+	}
+	75% {
+		transform: skew(-45deg);
+	}
+}
+.box4 {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 169, 98, 1) 0%,
+		rgba(146, 255, 177, 1) 33%,
+		rgba(101, 210, 255, 1) 66%,
+		rgba(255, 169, 98, 1) 100%
+	);
+	animation: fondo 5s linear infinite;
+	background-size: 400%;
+}
+@keyframes fondo {
+	50% {
+		border-radius: 50%;
+	}
+	100% {
+		background-position: 400%;
+	}
+}
+.box5 {
+	border: 5px solid white;
+	animation: borde 3s linear infinite;
+	border-image: linear-gradient(
+			0deg,
+			rgba(255, 115, 0, 1) 0%,
+			rgba(255, 248, 0, 1) 50%,
+			rgba(0, 255, 72, 1) 100%
+		)
+		1;
+}
+@keyframes borde {
+	0% {
+		border-image: linear-gradient(
+				0deg,
+				rgba(255, 115, 0, 1) 0%,
+				rgba(255, 248, 0, 1) 50%,
+				rgba(0, 255, 72, 1) 100%
+			)
+			1;
+	}
+	25% {
+		border-image: linear-gradient(
+				90deg,
+				rgba(255, 115, 0, 1) 0%,
+				rgba(255, 248, 0, 1) 50%,
+				rgba(0, 255, 72, 1) 100%
+			)
+			1;
+	}
+
+	50% {
+		border-image: linear-gradient(
+				180deg,
+				rgba(255, 115, 0, 1) 0%,
+				rgba(255, 248, 0, 1) 50%,
+				rgba(0, 255, 72, 1) 100%
+			)
+			1;
+	}
+
+	75% {
+		border-image: linear-gradient(
+				270deg,
+				rgba(255, 115, 0, 1) 0%,
+				rgba(255, 248, 0, 1) 50%,
+				rgba(0, 255, 72, 1) 100%
+			)
+			1;
+	}
+
+	100% {
+		border-image: linear-gradient(
+				360deg,
+				rgba(255, 115, 0, 1) 0%,
+				rgba(255, 248, 0, 1) 50%,
+				rgba(0, 255, 72, 1) 100%
+			)
+			1;
+	}
+}
