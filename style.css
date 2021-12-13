@@ -310,6 +310,9 @@ nav a:hover {
 
 
 @media(max-width: 575px){
+	.container{
+		padding-top: 120px;
+	}
 	header{
 		flex-direction: column;
 		gap: 1.5rem;
